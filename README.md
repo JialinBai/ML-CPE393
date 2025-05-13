@@ -66,7 +66,7 @@ Response
 ```
 ok mean its running
 
-Tech
+##Tech
 pip install -r requirements.txt
 
 Jialin Bai 64070503409
