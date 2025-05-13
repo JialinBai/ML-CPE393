@@ -23,5 +23,5 @@ model = RandomForestRegressor(n_estimators=100, random_state=42)
 
 model.fit(X_train, y_train)
 
-with open("app/model.pkl", "wb") as f:
+with open("app/model2.pkl", "wb") as f:
     pickle.dump(model, f)
