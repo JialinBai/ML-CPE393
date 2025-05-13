@@ -52,7 +52,7 @@ docker run -p 9000:9000 ml-model
 confidence = confidence score 0 = low and 1 = high
 prediction = predicted house price
 
-##Health Check
+## Health Check
 
 To make sure API is running
 
