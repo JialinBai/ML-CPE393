@@ -15,11 +15,54 @@ A **Random Forest Regressor** is employed for this project, which predicts housi
 ## Setup Instructions
 
 ### Step 1: Train the Model
-Run `train.py`. This will save the trained model as `model2.pkl` in the `app` directory.
+Run `train-2.py`. This will save the trained model as `model2.pkl` in the `app` directory.
 
 ### Step 2: Launch the Flask App
 In your terminal, navigate to the project directory and execute `app.py`:
 
-```bash
-cd "project folder directory"
-python app.py
+### Step 3: Build Docker image
+docker build -t ml-model .
+
+### Step 4: Run Docker container
+docker run -p 9000:9000 ml-model
+
+## Sample API Request and Response
+
+### **Prediction Endpoint:**
+
+- **Method**: `POST`
+- **URL**: `http://127.0.0.1:9000/predict`
+
+### **Request Body Example**
+
+```json
+{
+  "features": [
+    [8500, 5, 3, 2, 1, 1, 1, 1, 1, 2, 0, 1, 0]
+  ]
+}
+
+### **Response Example**
+```json
+{
+    "confidence": 0.0,
+    "prediction": 9682680.0
+}
+
+confidence = confidence score 0 = low and 1 = high
+prediction = predicted house price
+
+##Health Check
+To make sure API is running
+http://localhost:9000/health
+Response
+{
+    "status": "ok"
+}
+
+ok mean its running
+
+Tech
+pip install -r requirements.txt
+
+Jialin Bai 64070503409
