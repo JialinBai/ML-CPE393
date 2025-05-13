@@ -41,25 +41,29 @@ docker run -p 9000:9000 ml-model
     [8500, 5, 3, 2, 1, 1, 1, 1, 1, 2, 0, 1, 0]
   ]
 }
-
+```
 ### **Response Example**
 ```json
 {
     "confidence": 0.0,
     "prediction": 9682680.0
 }
-
+```
 confidence = confidence score 0 = low and 1 = high
 prediction = predicted house price
 
 ##Health Check
+
 To make sure API is running
+
 http://localhost:9000/health
+
 Response
+```json
 {
     "status": "ok"
 }
-
+```
 ok mean its running
 
 Tech
